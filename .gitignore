@@ -1,3 +1,9 @@
+# Idea files
+*.idea
+
+# Project files
+*.iml
+
 # Compiled class file
 *.class
 
