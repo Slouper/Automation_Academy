@@ -3,9 +3,6 @@ package sloupfirstlecture.javabasics;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author petr.sloup
- */
 public class Calculator {
     private static final Logger log = LoggerFactory.getLogger(JavaBasics.class);
 

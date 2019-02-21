@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="tests">
+
+    <test name="backend">
+        <packages>
+            <package name="sloupfirstlecture.basictestnostructure.SpaghettiTestAfterLecture1"/>
+        </packages>
+    </test>
+
+    <test name="backend2">
+        <classes>
+            <class name="sloupfirstlecture.basictestwithstructure.PageObjectTests"/>
+        </classes>
+    </test>
+
+</suite>
