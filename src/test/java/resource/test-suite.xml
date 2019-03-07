@@ -4,13 +4,13 @@
 
     <test name="backend">
         <packages>
-            <package name="sloupfirstlecture.basictestnostructure.SpaghettiTestAfterLecture1"/>
+            <package name="sloup.basictestnostructure.SpaghettiTestAfterLecture1"/>
         </packages>
     </test>
 
     <test name="backend2">
         <classes>
-            <class name="sloupfirstlecture.basictestwithstructure.PageObjectTests"/>
+            <class name="sloup.basictestwithstructure.PageObjectTests"/>
         </classes>
     </test>
 
