@@ -1,4 +1,4 @@
-package sloupfirstlecture.basictestwithstructure;
+package MBA;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
