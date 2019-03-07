@@ -1,22 +1,22 @@
-package sloupfirstlecture.basictestwithstructure;
+package sloup.basictestwithstructure;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import sloupfirstlecture.pageobjects.SeznamHomePage;
-import sloupfirstlecture.pageobjects.SeznamSearchResultsPage;
+import sloup.pageobject.SeznamHomePage;
+import sloup.pageobject.SeznamSearchResultsPage;
 
-/**
- * @author petr.sloup
- */
 @Test
 public class PageObjectTests {
     private static final Logger log = LoggerFactory.getLogger(PageObjectTests.class);
 
     @Test
-    public void searchTermAndClickOnResult_WhenResultPageIsOpen() {
+    public void searchTermAndClickOnResultWhenResultPageIsOpen() {
 
         System.setProperty("webdriver.chrome.driver", "C:/chrome_driver/chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
@@ -35,11 +35,22 @@ public class PageObjectTests {
             log.debug("Waiting 5 seconds before test end.");
             Thread.sleep(5000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            log.error("Thread interrupted!", e);
+            Thread.currentThread().interrupt();
         }
 
         driver.quit();
 
+    }
+
+    @BeforeTest
+    public WebDriver startDriver() {
+        return null;
+    }
+
+    @AfterTest
+    public void quitDriver(WebDriver driver) {
+        driver.quit();
     }
 
 }
