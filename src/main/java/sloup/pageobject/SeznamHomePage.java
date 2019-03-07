@@ -1,4 +1,4 @@
-package sloupfirstlecture.pageobjects;
+package sloup.pageobject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,9 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-/**
- * @author petr.sloup
- */
 public class SeznamHomePage {
 
     @FindBy(how = How.XPATH, using = "//*[@name='q']")
