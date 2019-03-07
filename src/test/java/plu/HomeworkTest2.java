@@ -1,8 +1,7 @@
-package patrikluksch;
+package plu;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,12 +11,11 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-@Test
-public class HomeworkTest1 {
+public class HomeworkTest2 {
 
     private static final Logger log = LoggerFactory.getLogger(HomeworkTest1.class);
     private FirefoxDriver driver;
-    String resultTitle = "Nepodařilo se vyhledat vhodné spojení | Dopravní podnik hlavního města Prahy";
+   // String resultTitle = "Nepodařilo se vyhledat vhodné spojení | Dopravní podnik hlavního města Prahy";
 
     @BeforeTest
     public void getFirefoxDriver() {
@@ -31,24 +29,30 @@ public class HomeworkTest1 {
 
 
     @Test
-    public void searchBusOnDPPPage_WhenDPPSpojeniPageIsOpen() {
-        log.debug("Test 'searchBusOnDPP' started");
+    public void searchBusRegioJetPage_WhenRegioJetPageIsOpen() {
+        log.debug("Test 'searchRegioJetBus' started");
 
-        driver.get("http://spojeni.dpp.cz/");
+        driver.get("https://jizdenky.regiojet.cz/");
 
-        driver.findElement(By.id("ctlFrom_txtObject")).sendKeys("Palouček");
+        driver.findElement(By.id("destination_from")).sendKeys("Praha");
 
-        driver.findElement(By.id("ctlTo_txtObject")).sendKeys("I. P. Pavlova");
+        driver.findElement(By.id("destination_to")).sendKeys("Olomouc");
 
-        driver.findElement(By.id("optChangesDirect")).click();
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
-        driver.findElement(By.id("chkLowDeckConnection")).click();
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
 
-        driver.findElement(By.id("cmdSearch")).click();
+       // driver.findElement(By.id("chkLowDeckConnection")).click();
+
+       // driver.findElement(By.id("cmdSearch")).click();
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
 
-        wait.until(ExpectedConditions.titleContains(resultTitle));
+       // wait.until(ExpectedConditions.titleContains(resultTitle));
     }
 
     @AfterTest
