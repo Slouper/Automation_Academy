@@ -8,13 +8,10 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import sloupfirstlecture.basictestnostructure.SpaghettiTest;
-import sloupfirstlecture.pageobjects.SeznamHomePage;
-import sloupfirstlecture.pageobjects.SeznamSearchResultsPage;
 
 @Test
 public class firstMozillaTest {
-    private static final Logger log = LoggerFactory.getLogger(SpaghettiTest.class);
+    private static final Logger log = LoggerFactory.getLogger(firstMozillaTest.class);
 
 
     @Test
