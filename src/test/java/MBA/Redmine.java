@@ -5,6 +5,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -17,6 +19,7 @@ public class Redmine {
 
         @Test
         public void Registration() {
+             final Logger log = LoggerFactory.getLogger(Redmine.class);
 
         driver.findElement(By.xpath("//*[@id=\"account\"]/ul/li[2]/a")).click();
         driver.findElement(By.xpath("//*[@id=\"user_login\"]")).sendKeys("TvojeMama");
@@ -35,6 +38,7 @@ public class Redmine {
                 .sendKeys(Keys.RETURN)
                 .pause(Duration.ofSeconds(3))
                 .perform();
+            System.out.println(driver.findElement(By.xpath("//*[@id=\"flash_error\"]")).getText());
     }
 
         @BeforeClass
