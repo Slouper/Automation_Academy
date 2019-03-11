@@ -2,6 +2,7 @@ package mol;
 
 
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import java.util.UUID;
 
 @Test
 public class DomaciUkolRedmine {
@@ -20,13 +22,16 @@ public class DomaciUkolRedmine {
 
         Actions actions = new Actions(driver);
 
+        String uuid = UUID.randomUUID().toString();
+
+
         driver.findElement(By.xpath("//a[@href='/account/register']")).click();
-        driver.findElement(By.xpath("//input[@id='user_login']")).sendKeys("Batman641639");
+        driver.findElement(By.xpath("//input[@id='user_login']")).sendKeys(uuid);
         driver.findElement(By.xpath("//input[@id='user_password']")).sendKeys("123456789");
         driver.findElement(By.xpath("//input[@id='user_password_confirmation']")).sendKeys("123456789");
         driver.findElement(By.xpath("//input[@id='user_firstname']")).sendKeys("Bruce");
         driver.findElement(By.xpath("//input[@id='user_lastname']")).sendKeys("Wayne");
-        driver.findElement(By.xpath("//input[@id='user_mail']")).sendKeys("bat641639@man.com");
+        driver.findElement(By.xpath("//input[@id='user_mail']")).sendKeys(uuid+"@batman.com");
         driver.findElement(By.xpath("//input[@id='user_custom_field_values_3']")).sendKeys("Blabla");
 
         actions
@@ -34,7 +39,7 @@ public class DomaciUkolRedmine {
                 .perform();
 
 
-        driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Batman641639");
+        driver.findElement(By.xpath("//input[@id='username']")).sendKeys(uuid);
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("123456789");
 
         actions
