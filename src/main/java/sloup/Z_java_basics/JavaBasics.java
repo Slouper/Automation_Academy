@@ -1,4 +1,4 @@
-package sloup.javabasics;
+package sloup.Z_java_basics;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
