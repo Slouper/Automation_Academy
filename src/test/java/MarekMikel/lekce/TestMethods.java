@@ -1,4 +1,4 @@
-package MarekMikel.tretiLekce;
+package MarekMikel.lekce;
 
 import MarekMikel.homework.FirstHW;
 import org.openqa.selenium.By;
@@ -67,8 +67,6 @@ public class TestMethods {
 
     @BeforeClass
     public void getChromeDriver() {
-        System.setProperty("webdriver.chrome.driver", "C:/chrome_driver/chromedriver.exe");
-
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 2);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);

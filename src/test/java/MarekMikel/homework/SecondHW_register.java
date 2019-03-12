@@ -59,12 +59,10 @@ public class SecondHW_register {
     @BeforeClass
     public void getChromeDriver() {
         System.setProperty("webdriver.chrome.driver", "C:/chrome_driver/chromedriver.exe");
-
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 2);
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-
-        log.debug("WebDriver started ....");
+            driver = new ChromeDriver();
+            wait = new WebDriverWait(driver, 2);
+            driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+            log.debug("WebDriver started ....");
     }
 
     @AfterMethod
