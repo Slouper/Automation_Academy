@@ -10,12 +10,11 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import sloupfirstlecture.basictestnostructure.SpaghettiTest;
 
 import java.util.concurrent.TimeUnit;
 
 public class TretiLekce {
-    private static final Logger log = LoggerFactory.getLogger(SpaghettiTest.class);
+    private static final Logger log = LoggerFactory.getLogger(TretiLekce.class);
 
     private ChromeDriver driver;
     WebDriverWait wait;
