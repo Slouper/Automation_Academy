@@ -2,17 +2,21 @@ package MarekMikel.lekce;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
 public abstract class TestAbstract {
 
     private WebDriver driver;
+    private WebDriverWait wait;
 
     @BeforeClass
     public void getChromeDriver() {
         driver = new ChromeDriver();
+        wait = new WebDriverWait(driver, 5);
     }
+
 
     @AfterMethod
     public void CloseDriver() {
@@ -27,4 +31,5 @@ public abstract class TestAbstract {
     protected WebDriver getDriver(){
         return driver;
     }
+    protected WebDriverWait getWait() {return wait;}
 }

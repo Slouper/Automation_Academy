@@ -10,7 +10,6 @@ public abstract class AbstractPage {
     }
 
     protected void sikovnaFinta() { pomocnaMetodaProFintu();}
-
     private void pomocnaMetodaProFintu(){
 
     }
