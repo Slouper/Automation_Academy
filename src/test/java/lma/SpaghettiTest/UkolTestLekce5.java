@@ -1,5 +1,6 @@
-package lma;
+package lma.SpaghettiTest;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -26,8 +27,11 @@ public class UkolTestLekce5 {
 
     }
     @Test
-    public void UkolLekce4() {
+    public void UkolLekce5() {
         Actions action = new Actions(driver);
+
+        Random rand = new Random();
+        int n = rand.nextInt(1000);
 
         log.debug("Test 'UkolTestLekce5' started");
 
@@ -40,12 +44,12 @@ public class UkolTestLekce5 {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"content\"]/h2")));
 
-        driver.findElement(By.id("user_login")).sendKeys("Java1234567");
+        driver.findElement(By.id("user_login")).sendKeys("Java" + n);
         driver.findElement(By.id("user_password")).sendKeys("Heslo123");
         driver.findElement(By.id("user_password_confirmation")).sendKeys("Heslo123");
         driver.findElement(By.id("user_firstname")).sendKeys("Krestni");
         driver.findElement(By.id("user_lastname")).sendKeys("Prijmeni");
-        driver.findElement(By.id("user_mail")).sendKeys("eee@fff.cz");
+        driver.findElement(By.id("user_mail")).sendKeys(n + "@fff.cz");
         driver.findElement(By.id("user_language")).click();
         driver.findElement(By.xpath("//*[@id=\"user_language\"]/option[13]")).click();
         driver.findElement(By.id("user_custom_field_values_3")).sendKeys("123456");
@@ -58,7 +62,7 @@ public class UkolTestLekce5 {
 
         log.debug("Login started....");
 
-        driver.findElement(By.id("username")).sendKeys("Java1234567");
+        driver.findElement(By.id("username")).sendKeys("Java" + n);
         driver.findElement(By.id("password")).sendKeys("Heslo123");
 
         action

@@ -1,4 +1,4 @@
-package lma;
+package lma.SpaghettiTest;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
