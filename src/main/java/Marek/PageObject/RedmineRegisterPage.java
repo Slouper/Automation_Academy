@@ -8,9 +8,6 @@ import org.openqa.selenium.support.How;
 
 public class RedmineRegisterPage extends AbstractPage {
 
-    public static final String user = "Marek" + (int)(Math.random() * 5000 + 1);
-    public static final String email = (int)(Math.random() * 5000 + 1) + "@seznam.cz";
-
     @FindBy(how = How.XPATH, using = "//*[@id='user_login']")
     private WebElement userLogin;
 

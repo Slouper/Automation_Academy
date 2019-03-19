@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 
-public class RedmineLoginPage extends RedmineRegisterPage {
+public class RedmineLoginPage extends AbstractPage {
 
 
     @FindBy(how = How.XPATH, using = "//*[@class='register']")
@@ -21,6 +21,12 @@ public class RedmineLoginPage extends RedmineRegisterPage {
     @FindBy(how = How.XPATH, using = "//*[@name='login']")
     private WebElement login;
 
+    @FindBy(how = How.XPATH, using = "//*[contains(text(),'Účet byl úspěšně vytvořen')]")
+    private WebElement created;
+
+    @FindBy(how = How.XPATH, using = "//*[@id='flash_error']")
+    private WebElement error;
+
     public RedmineLoginPage(WebDriver driver) {
         super(driver);
     }
@@ -29,16 +35,24 @@ public class RedmineLoginPage extends RedmineRegisterPage {
         register.click();
     }
 
-    public void SearchUserLogin(){
+    public void SearchUserLogin(String user){
         userName.sendKeys(user);
     }
 
-    public void SearchUserPassword(String expression){
-        password.sendKeys(expression);
+    public void SearchUserPassword(String pwd){
+        password.sendKeys(pwd);
     }
 
     public void SearchLogin(){
         login.click();
+    }
+
+    public WebElement SearchCreated() {
+        return created;
+    }
+
+    public WebElement SearchError() {
+        return error;
     }
 
 }
