@@ -25,6 +25,8 @@ public class RedMinePageObjectTest extends AbstractTest {
         // redmine homepage
         RedMineHomePage redMineHomePage = new RedMineHomePage(getDriver());
 
+        redMineHomePage.isOpen();
+
         //register button
         redMineHomePage.clickRegisterButton();
 
@@ -36,6 +38,7 @@ public class RedMinePageObjectTest extends AbstractTest {
 
         //redmine register page
         RedMineRegisterPage redMineRegisterPage = new RedMineRegisterPage(getDriver());
+        redMineRegisterPage.isOpen();
 
         //registration form
         redMineRegisterPage.insertUserLogin(userName);
@@ -55,6 +58,7 @@ public class RedMinePageObjectTest extends AbstractTest {
 
         //login page
         RedMineLoginPage redMineLoginPage = new RedMineLoginPage(getDriver());
+        redMineLoginPage.isOpen();
 
         //login form
         redMineLoginPage.setUserName(userName);

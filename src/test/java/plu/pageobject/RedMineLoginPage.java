@@ -37,7 +37,7 @@ public class RedMineLoginPage extends BasePage {
         System.out.println(flashError.getText());
     }
 
-    protected void isOpen() {
+    public void isOpen() {
         new WebDriverWait(getDriver(), 20).until(ExpectedConditions -> loginButton.isDisplayed());
     }
 }

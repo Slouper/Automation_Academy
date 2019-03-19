@@ -73,7 +73,7 @@ public class RedMineRegisterPage extends BasePage {
         System.out.println(flashNotice.getText());
     }
 
-    protected void isOpen() {
+    public void isOpen() {
         new WebDriverWait(getDriver(), 20).until(ExpectedConditions -> submitButton.isDisplayed());
     }
 }

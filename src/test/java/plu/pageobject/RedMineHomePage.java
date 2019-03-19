@@ -20,7 +20,7 @@ public class RedMineHomePage extends BasePage {
 
     }
 
-   protected void isOpen() {
+   public void isOpen() {
         new WebDriverWait(getDriver(), 20).until(ExpectedConditions -> registerButton.isDisplayed());
     }
 }

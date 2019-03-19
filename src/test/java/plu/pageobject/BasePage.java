@@ -12,7 +12,7 @@ public abstract class BasePage {
         this.driver = driver;
     }
 
-    protected abstract void isOpen();
+    public abstract void isOpen();
 
     protected WebDriver getDriver() {
         return driver;
