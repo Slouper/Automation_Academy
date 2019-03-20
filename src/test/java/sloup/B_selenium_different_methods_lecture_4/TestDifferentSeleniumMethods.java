@@ -1,4 +1,4 @@
-package sloup.lecture2_selenium_actions_wait;
+package sloup.B_selenium_different_methods_lecture_4;
 
 import java.time.Duration;
 
@@ -22,6 +22,8 @@ public class TestDifferentSeleniumMethods {
     @Test
     public void testDoubleClickInActions() {
 
+        // ACTIONS
+
         driver.findElement(By.linkText("Checkboxes")).click();
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("checkboxes")));
@@ -32,6 +34,8 @@ public class TestDifferentSeleniumMethods {
                 .pause(Duration.ofSeconds(3))
                 .click(driver.findElement(By.xpath("//*[@id='checkboxes']/input[1]")))
                 .perform();
+
+        // ACTIONS KEY PRESSES
 
         driver.get("https://the-internet.herokuapp.com/key_presses");
 
@@ -48,6 +52,8 @@ public class TestDifferentSeleniumMethods {
                 .pause(Duration.ofSeconds(3))
                 .perform();
 
+        // ALERTS
+
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
@@ -60,6 +66,8 @@ public class TestDifferentSeleniumMethods {
 
         driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();
 
+        // DROPDOWN - SELECT
+
         driver.get("https://the-internet.herokuapp.com/dropdown");
 
         sleep(5000);
@@ -68,6 +76,7 @@ public class TestDifferentSeleniumMethods {
                 .selectByIndex(1);
 
         sleep(3000);
+
     }
 
     private void sleep(int millis) {
