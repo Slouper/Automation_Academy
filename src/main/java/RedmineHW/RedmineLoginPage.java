@@ -8,13 +8,13 @@ import org.openqa.selenium.support.How;
 
 public class RedmineLoginPage extends RedmineAbstract {
 
-    @FindBy(how = How.ID, using = "username")
+    @FindBy(how = How.XPATH, using = "//input[@id='username']")
     private WebElement usernameLogin;
 
-    @FindBy(how = How.ID, using = "password")
+    @FindBy(how = How.XPATH, using = "//input[@id='password']")
     private WebElement usernamePassword;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"login-form\"]/form/table/tbody/tr[4]/td[2]/input")
+    @FindBy(how = How.XPATH, using = "//input[@name='login']")
     private WebElement clickLoginButton;
 
     public RedmineLoginPage(WebDriver driver) {

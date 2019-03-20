@@ -1,13 +1,12 @@
-package lma.RedimeHWTest;
+package lma.xpathHWTest;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import java.util.Random;
 
+public abstract class xPathTestAbstract {
 
-public abstract class RedmineObjectTestAbstract {
     private WebDriver driver;
 
     @BeforeClass
@@ -28,13 +27,7 @@ public abstract class RedmineObjectTestAbstract {
         driver.quit();
     }
 
-    protected int random() {
-        Random rand = new Random();
-        return rand.nextInt(100);
-    }
-
     protected WebDriver getDriver() {
         return driver;
     }
-
 }
