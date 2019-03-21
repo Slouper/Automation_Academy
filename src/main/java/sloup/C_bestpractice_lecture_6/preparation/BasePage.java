@@ -35,10 +35,9 @@ public abstract class BasePage {
     /**
      * Methods check presence of element itself (substitution for method presenceOf(WebElement element))
      *
-     * @param element
      */
     protected void isElementPresent(WebElement element) {
-        getWait().until(ExpectedConditions -> element.findElements(By.xpath("/*")).size() > 0);
+        getWait().until(ExpectedConditions -> !element.findElements(By.xpath("//self::*")).isEmpty());
     }
 
     protected void isElementDisplayed(WebElement element) {
