@@ -29,7 +29,7 @@ public class SecondHW_register {
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'Contact')]")));
 
-        driver.findElement(By.xpath("//*[@name='firstName']")).sendKeys("Marek");
+        driver.findElement(By.xpath("//*[@name='firstName']")).sendKeys("marek");
         driver.findElement(By.xpath("//*[@name='lastName']")).sendKeys("Mikel");
         driver.findElement(By.xpath("//*[@name='phone']")).sendKeys("111222333");
         driver.findElement(By.xpath("//*[@id='userName']")).sendKeys("marek.mikel@test.cz");
@@ -53,7 +53,7 @@ public class SecondHW_register {
                 .sendKeys(Keys.ENTER)
                 .perform();
 
-        assertEquals("Dear Marek Mikel,", driver.findElement(By.xpath("//*[contains(text(),'Dear')]")).getText());
+        assertEquals("Dear marek Mikel,", driver.findElement(By.xpath("//*[contains(text(),'Dear')]")).getText());
     }
 
     @BeforeClass

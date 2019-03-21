@@ -1,4 +1,4 @@
-package Marek.PageObject_lection7;
+package marek.pageObject_lection7;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

@@ -1,6 +1,6 @@
-package Marek.PageObject_lection7;
+package marek.pageObject_lection7;
 
-import Marek.PageObject.AbstractPage;
+import marek.pageObject.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

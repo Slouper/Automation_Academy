@@ -1,4 +1,4 @@
-package Marek;
+package marek;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

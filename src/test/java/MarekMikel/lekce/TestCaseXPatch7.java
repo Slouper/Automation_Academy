@@ -1,12 +1,11 @@
 package MarekMikel.lekce;
 
-import Marek.PageObject_lection7.RedmineHelpPageXPath;
-import Marek.PageObject_lection7.RedmineHomePageXPath;
-import Marek.PageObject_lection7.RedmineLoginPageXPath;
-import Marek.PageObject_lection7.RedmineMainPageXPatch;
+import marek.pageObject_lection7.RedmineHelpPageXPath;
+import marek.pageObject_lection7.RedmineHomePageXPath;
+import marek.pageObject_lection7.RedmineLoginPageXPath;
+import marek.pageObject_lection7.RedmineMainPageXPatch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import static org.junit.Assert.assertEquals;

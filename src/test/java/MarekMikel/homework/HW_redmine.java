@@ -16,7 +16,7 @@ public class HW_redmine {
     private static final Logger log = LoggerFactory.getLogger(FirstHW.class);
     private ChromeDriver driver;
     WebDriverWait wait;
-    public static final String user = "Marek" + (int)(Math.random() * 5000 + 1);
+    public static final String user = "marek" + (int)(Math.random() * 5000 + 1);
     public static final String email = "" + (int)(Math.random() * 5000 + 1);
 
     @Test
@@ -33,8 +33,8 @@ public class HW_redmine {
         driver.findElement(By.xpath("//*[@id='user_password']")).sendKeys("pejsek");
         driver.findElement(By.xpath("//*[@id='user_password_confirmation']")).sendKeys("pejsek");
 
-        driver.findElement(By.xpath("//*[@id='user_firstname']")).sendKeys("Marek");
-        driver.findElement(By.xpath("//*[@id='user_lastname']")).sendKeys("Marek");
+        driver.findElement(By.xpath("//*[@id='user_firstname']")).sendKeys("marek");
+        driver.findElement(By.xpath("//*[@id='user_lastname']")).sendKeys("marek");
         driver.findElement(By.xpath("//*[@id='user_mail']")).sendKeys("marek@marek" + email + ".cz");
         driver.findElement(By.xpath("//*[@id='user_custom_field_values_3']")).sendKeys("Praha");
         driver.findElement(By.xpath("//*[@name='commit']")).click();
