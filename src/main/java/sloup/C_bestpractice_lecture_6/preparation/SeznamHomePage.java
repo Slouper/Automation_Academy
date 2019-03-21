@@ -12,6 +12,9 @@ public class SeznamHomePage extends BasePage {
     @FindBy(how = How.XPATH, using = "//button[contains(@class,'search-form__button')]")
     private WebElement searchButton;
 
+    @FindBy(how = How.XPATH, using = "//*[contains(@href,'https://www.garaz.cz')]")
+    private WebElement garazLink;
+
     @Override
     public void checkPageIsOpen() {
         isElementPresent(searchInputField);
@@ -20,6 +23,7 @@ public class SeznamHomePage extends BasePage {
     public SeznamSearchResultsPage searchExpressionOnSeznamHomePage(String searchedExpression) {
         searchInputField.sendKeys(searchedExpression);
         searchButton.click();
+
         // Create page sends such object type which takes from method return type -> SeznamSearchResultsPage
         return createPage(); // SeznamSearchResultsPage
     }

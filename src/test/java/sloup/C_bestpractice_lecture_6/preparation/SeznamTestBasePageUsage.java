@@ -17,4 +17,9 @@ public class SeznamTestBasePageUsage extends BaseTest {
                 .searchExpressionOnSeznamHomePage("Selenium WebDriver")
                 .clickOnResultOnResultPage();
     }
+
+    @Test
+    public void testX() {
+        new SeznamHomePage().searchExpressionOnSeznamHomePage("ssss");
+    }
 }
