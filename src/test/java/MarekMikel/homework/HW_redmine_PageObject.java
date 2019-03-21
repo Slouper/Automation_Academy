@@ -4,6 +4,7 @@ import marek.pageObject.RedmineLoginPage;
 import marek.pageObject.RedmineRegisterPage;
 import MarekMikel.lekce.TestAbstract;
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +33,8 @@ public class HW_redmine_PageObject extends TestAbstract {
             redmineLoginPage.SearchUserLogin(user);
             redmineLoginPage.SearchUserPassword("pesakocka");
             redmineLoginPage.SearchLogin();
+
+
         assertEquals("Neaktivovali jste si dosud Váš účet. Pro opětovné zaslání aktivačního emailu klikněte na tento odkaz, prosím." , redmineLoginPage.SearchError().getText());
 
 

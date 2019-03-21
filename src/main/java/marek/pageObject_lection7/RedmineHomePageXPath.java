@@ -1,6 +1,7 @@
 package marek.pageObject_lection7;
 
 import marek.pageObject.AbstractPage;
+import marek.pageObject.RedmineLoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,6 +16,12 @@ public class RedmineHomePageXPath extends AbstractPage {
 
     public RedmineHomePageXPath(WebDriver driver) {super(driver);}
 
-    public void SearchLoginAnchor() {loginAnchor.click();}
+    //public void SearchLoginAnchor() {loginAnchor.click();}
+
+    //z nove lekce pro zjednoduseni-vratim si to, s cim chci pracovat - pak s LoginPage
+    public RedmineLoginPage clickOnLoginAnchor(WebDriver driver){
+        loginAnchor.click();
+        return new RedmineLoginPage(driver);
+    }
 
 }

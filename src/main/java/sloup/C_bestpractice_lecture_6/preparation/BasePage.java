@@ -23,7 +23,7 @@ public abstract class BasePage {
     public abstract void checkPageIsOpen();
 
     protected void waitForPageLoaded() {
-        ExpectedCondition<Boolean> expectation = driver -> ((JavascriptExecutor) this.driver).executeScript("return document.readyState").toString()
+        ExpectedCondition<Boolean> expectation = expectedCondition -> ((JavascriptExecutor) this.driver).executeScript("return document.readyState").toString()
                 .equals("complete");
         try {
             wait.until(expectation);
@@ -38,7 +38,7 @@ public abstract class BasePage {
      * @param element
      */
     protected void isElementPresent(WebElement element) {
-        getWait().until(ExpectedConditions -> element.findElements(By.xpath("/*")).size() > 0);
+        getWait().until(ExpectedConditions -> !element.findElements(By.xpath("/*")).isEmpty());
     }
 
     protected void isElementDisplayed(WebElement element) {
