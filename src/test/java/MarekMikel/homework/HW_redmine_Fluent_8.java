@@ -1,13 +1,7 @@
 package MarekMikel.homework;
 
 import MarekMikel.lekce.TestAbstract;
-import marek.pageObject.RedmineLoginPage;
-import marek.pageObject.RedmineRegisterPage;
 import marek.pageObject_HW8.*;
-import marek.pageObject_lection7.RedmineHelpPageXPath;
-import marek.pageObject_lection7.RedmineHomePageXPath;
-import marek.pageObject_lection7.RedmineLoginPageXPath;
-import marek.pageObject_lection7.RedmineMainPageXPatch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.slf4j.Logger;
@@ -29,16 +23,19 @@ public class HW_redmine_Fluent_8 extends TestAbstract {
         getDriver().get("http://www.redmine.org");
 
         new RedmineHomePage8(getDriver())
-                .clickOnLoginAnchor(getDriver());
-
-        new RedmineLoginPage8(getDriver())
-                .inputLoginAnchor(getDriver(), "pepe5565", "PXPkehadBWX97Y9");
-
-        new RedmineMainPage8(getDriver())
-                .clickOnHelpAnchor(getDriver());
-
-        new RedmineHelpPage8(getDriver())
-                .ClickReportAnchor(getDriver());
+                .clickOnLoginAnchor(getDriver())
+                .inputLoginAnchor(getDriver(),"pepe5565", "PXPkehadBWX97Y9")
+                .clickOnHelpAnchor(getDriver())
+                .clickReportAnchor(getDriver());
+//
+//        new RedmineLoginPage8(getDriver())
+//                .inputLoginAnchor(getDriver(), "pepe5565", "PXPkehadBWX97Y9");
+//
+//        new RedmineMainPage8(getDriver())
+//                .clickOnHelpAnchor(getDriver());
+//
+//        new RedmineHelpPage8(getDriver())
+//                .clickReportAnchor(getDriver());
 
         getWait().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@name='Redmine-Timelog-Report']/following::h1")));
         assertEquals("Redmine Timelog Report",

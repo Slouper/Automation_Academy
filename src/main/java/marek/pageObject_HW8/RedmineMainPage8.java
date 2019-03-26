@@ -18,8 +18,8 @@ public class RedmineMainPage8 extends AbstractPage {
         super(driver);
     }
 
-    public RedmineReportPage8 clickOnHelpAnchor(WebDriver driver){
+    public RedmineHelpPage8 clickOnHelpAnchor(WebDriver driver){
         helpAnchor.click();
-        return new RedmineReportPage8(driver);
+        return new RedmineHelpPage8(driver);
     }
 }

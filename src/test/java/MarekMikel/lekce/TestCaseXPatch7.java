@@ -18,12 +18,17 @@ public class TestCaseXPatch7 extends TestAbstract{
     public void TestCaseXPatch7() {
         getDriver().get("http://www.redmine.org");
 
-//        RedmineHomePageXPath redmineHomePageXPath = new RedmineHomePageXPath(getDriver());
+//        RedmineHomePage8 redmineHomePageXPath = new RedmineHomePage8(getDriver());
 //        redmineHomePageXPath.SearchLoginAnchor();
 
         //z nove lekce pro zjednoduseni vrsku
         new RedmineHomePageXPath(getDriver())
                 .clickOnLoginAnchor(getDriver());
+
+
+
+
+
 
         RedmineLoginPageXPath redmineLoginPageXPath = new RedmineLoginPageXPath(getDriver());
         redmineLoginPageXPath.SearchUserLogin("pepe5565");

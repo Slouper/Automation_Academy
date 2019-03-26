@@ -23,10 +23,10 @@ public class RedmineLoginPage8 extends AbstractPage {
         super(driver);
     }
 
-    public RedmineHelpPage8 inputLoginAnchor(WebDriver driver, String user, String pwd){
+    public RedmineMainPage8 inputLoginAnchor(WebDriver driver, String user, String pwd){
         userName.sendKeys(user);
         password.sendKeys(pwd);
         login.click();
-        return new RedmineHelpPage8(driver);
+        return new RedmineMainPage8(driver);
     }
 }

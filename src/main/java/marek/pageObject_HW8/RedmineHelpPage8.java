@@ -16,7 +16,7 @@ public class RedmineHelpPage8 extends AbstractPage {
         super(driver);
     }
 
-    public RedmineReportPage8 ClickReportAnchor(WebDriver driver){
+    public RedmineReportPage8 clickReportAnchor(WebDriver driver){
         spentTimeReport.click();
         return new RedmineReportPage8(driver);
     }
