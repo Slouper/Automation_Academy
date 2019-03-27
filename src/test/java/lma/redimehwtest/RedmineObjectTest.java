@@ -1,8 +1,8 @@
 package lma.redimehwtest;
 
-import redminehw.RedmineHomePage;
-import redminehw.RedmineLoginPage;
-import redminehw.RedmineRegisterPage;
+import lma.redminehw.RedmineHomePage;
+import lma.redminehw.RedmineLoginPage;
+import lma.redminehw.RedmineRegisterPage;
 import org.testng.annotations.Test;
 
 @Test

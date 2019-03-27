@@ -20,20 +20,18 @@ public class UkolTestLekce4 {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
+        driver.get("http://newtours.demoaut.com/mercurywelcome.php");
     }
     @Test
     public void UkolLekce4() {
         Actions action = new Actions(driver);
-
-        driver.get("http://newtours.demoaut.com/mercurywelcome.php");
-
         action
                 .click(driver.findElement(By.linkText("REGISTER")))
                 .perform();
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[1]/td/img")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='REGISTER']")));
 
         driver.findElement(By.name("firstName")).sendKeys("Krestni");
         driver.findElement(By.name("lastName")).sendKeys("Prijmeni");
@@ -41,7 +39,6 @@ public class UkolTestLekce4 {
         driver.findElement(By.id("userName")).sendKeys("aaa@bbb.com");
         driver.findElement(By.name("address1")).sendKeys("U javy 123");
         driver.findElement(By.name("city")).sendKeys("Java");
-        driver.findElement(By.name("country")).click();
         driver.findElement(By.xpath("/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[12]/td[2]/select/option[71]")).click();
         driver.findElement(By.id("email")).sendKeys("java123");
         driver.findElement(By.name("password")).sendKeys("Java");
@@ -51,8 +48,7 @@ public class UkolTestLekce4 {
                 .sendKeys(Keys.ENTER)
                 .perform();
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[3]/td/p[1]/font/b")));
-
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()=' sign-in ']")));
     }
 
 

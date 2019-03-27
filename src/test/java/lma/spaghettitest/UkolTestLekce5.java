@@ -51,7 +51,7 @@ public class UkolTestLekce5 {
         driver.findElement(By.id("user_lastname")).sendKeys("Prijmeni");
         driver.findElement(By.id("user_mail")).sendKeys(n + "@fff.cz");
         driver.findElement(By.id("user_language")).click();
-        driver.findElement(By.xpath("//*[@id=\"user_language\"]/option[13]")).click();
+        driver.findElement(By.xpath("//*[@id='user_language']/option[13]")).click();
         driver.findElement(By.id("user_custom_field_values_3")).sendKeys("123456");
 
         action

@@ -1,7 +1,7 @@
 package lma.xpathhwtest;
 
 import org.testng.annotations.Test;
-import xpathhw.*;
+import lma.xpathhw.*;
 
 @Test
 public class XpathTest extends XpathTestAbstract {

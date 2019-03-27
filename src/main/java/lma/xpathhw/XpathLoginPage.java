@@ -1,10 +1,9 @@
-package xpathhw;
+package lma.xpathhw;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class XpathLoginPage extends XpathAbstract {
 
@@ -34,6 +33,6 @@ public class XpathLoginPage extends XpathAbstract {
 
     }
     protected void isOpen() {
-        new WebDriverWait(getDriver(), 20).until(ExpectedConditions -> xpathClickLoginButton.isDisplayed());
+        getWait().until(ExpectedConditions -> xpathClickLoginButton.isDisplayed());
     }
 }

@@ -1,6 +1,6 @@
 package lma.fluenthwtest;
 
-import fluenthw.FluentHomePage;
+import lma.fluenthw.FluentHomePage;
 import org.testng.annotations.Test;
 
 @Test

@@ -30,7 +30,7 @@ public abstract class RedmineObjectTestAbstract {
 
     protected int random() {
         Random rand = new Random();
-        return rand.nextInt(100);
+        return rand.nextInt(1000);
     }
 
     protected WebDriver getDriver() {
