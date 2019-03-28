@@ -23,10 +23,10 @@ public class HW_redmine_Fluent_8 extends TestAbstract {
         getDriver().get("http://www.redmine.org");
 
         new RedmineHomePage8(getDriver())
-                .clickOnLoginAnchor(getDriver())
-                .inputLoginAnchor(getDriver(),"pepe5565", "PXPkehadBWX97Y9")
-                .clickOnHelpAnchor(getDriver())
-                .clickReportAnchor(getDriver());
+                .clickOnLoginAnchor()
+                .inputLoginAnchor("pepe5565", "PXPkehadBWX97Y9")
+                .clickOnHelpAnchor()
+                .clickReportAnchor();
 //
 //        new RedmineLoginPage8(getDriver())
 //                .inputLoginAnchor(getDriver(), "pepe5565", "PXPkehadBWX97Y9");

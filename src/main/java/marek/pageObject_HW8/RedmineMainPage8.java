@@ -9,6 +9,7 @@ import org.openqa.selenium.support.How;
 
 public class RedmineMainPage8 extends AbstractPage {
 
+    private WebDriver driver;
 
     @FindBy(how = How.XPATH, using = "//div[@id='top-menu']//a[@class='help']")
     private WebElement helpAnchor;
@@ -16,9 +17,10 @@ public class RedmineMainPage8 extends AbstractPage {
 
     public RedmineMainPage8(WebDriver driver) {
         super(driver);
+        this.driver = driver;
     }
 
-    public RedmineHelpPage8 clickOnHelpAnchor(WebDriver driver){
+    public RedmineHelpPage8 clickOnHelpAnchor(){
         helpAnchor.click();
         return new RedmineHelpPage8(driver);
     }

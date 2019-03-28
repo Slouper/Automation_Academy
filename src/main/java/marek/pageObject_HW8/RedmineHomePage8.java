@@ -9,17 +9,21 @@ import org.openqa.selenium.support.How;
 
 public class RedmineHomePage8 extends AbstractPage {
 
+    private WebDriver driver;
 
     public Object clickOnLoginAnchor;
     @FindBy(how = How.XPATH, using = "//a[@class='login']")
     private WebElement loginAnchor;
 
-    public RedmineHomePage8(WebDriver driver) {super(driver);}
+    public RedmineHomePage8(WebDriver driver) {
+        super(driver);
+        this.driver = driver;
+    }
 
     //public void SearchLoginAnchor() {loginAnchor.click();}
 
     //z nove lekce pro zjednoduseni-vratim si to, s cim chci pracovat - pak s LoginPage
-    public RedmineLoginPage8 clickOnLoginAnchor(WebDriver driver){
+    public RedmineLoginPage8 clickOnLoginAnchor(){
         loginAnchor.click();
         return new RedmineLoginPage8(driver);
     }

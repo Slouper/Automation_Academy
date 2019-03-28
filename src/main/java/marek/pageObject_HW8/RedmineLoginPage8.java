@@ -9,6 +9,7 @@ import org.openqa.selenium.support.How;
 
 public class RedmineLoginPage8 extends AbstractPage {
 
+    private WebDriver driver;
 
     @FindBy(how = How.XPATH, using = "//input[@id='username']")
     private WebElement userName;
@@ -21,9 +22,10 @@ public class RedmineLoginPage8 extends AbstractPage {
 
     public RedmineLoginPage8(WebDriver driver) {
         super(driver);
+        this.driver = driver;
     }
 
-    public RedmineMainPage8 inputLoginAnchor(WebDriver driver, String user, String pwd){
+    public RedmineMainPage8 inputLoginAnchor(String user, String pwd){
         userName.sendKeys(user);
         password.sendKeys(pwd);
         login.click();
