@@ -1,4 +1,4 @@
-package sloup.basictestwithstructure;
+package MBA.Spaghettipageobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,13 +7,12 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import sloup.pageobject.SeznamHomePage;
-import sloup.pageobject.SeznamSearchResultsPage;
+import sloup.A_B_pageobject.SeznamHomePage;
+import sloup.A_B_pageobject.SeznamSearchResultsPage;
 
 @Test
-public class PageObjectTests {
-    private static final Logger log = LoggerFactory.getLogger(PageObjectTests.class);
+public class SpaghettiTestWithPageObjects {
+    private static final Logger log = LoggerFactory.getLogger(SpaghettiTestWithPageObjects.class);
 
     @Test
     public void searchTermAndClickOnResultWhenResultPageIsOpen() {

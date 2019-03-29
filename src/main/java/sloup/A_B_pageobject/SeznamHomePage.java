@@ -1,4 +1,4 @@
-package sloup.pageobject;
+package sloup.A_B_pageobject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,9 +18,9 @@ public class SeznamHomePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void searchExpressionOnSeznamHomePage(String searchedExpression) {
+    public SeznamHomePage searchExpressionOnSeznamHomePage(String searchedExpression) {
         searchInputField.sendKeys(searchedExpression);
         searchButton.click();
+        return this;
     }
-
 }
