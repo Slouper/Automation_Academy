@@ -13,13 +13,13 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Redmine {
+public class RedmineHW5 {
 
-        WebDriver driver;
+    WebDriver driver;
 
-        @Test
-        public void Registration() {
-             final Logger log = LoggerFactory.getLogger(Redmine.class);
+    @Test
+    public void Registration() {
+        final Logger log = LoggerFactory.getLogger(RedmineHW5.class);
 
         driver.findElement(By.xpath("//*[@id=\"account\"]/ul/li[2]/a")).click();
         driver.findElement(By.xpath("//*[@id=\"user_login\"]")).sendKeys("TvojeMama");
@@ -38,21 +38,22 @@ public class Redmine {
                 .sendKeys(Keys.RETURN)
                 .pause(Duration.ofSeconds(3))
                 .perform();
-            System.out.println(driver.findElement(By.xpath("//*[@id=\"flash_error\"]")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@id=\"flash_error\"]")).getText());
     }
 
-        @BeforeClass
-        public void startDriver() {
+    @BeforeClass
+    public void startDriver() {
+        System.setProperty("webdriver.chrome.driver", "C:/chrome_driver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://www.redmine.org/");
         driver.manage().window().maximize();
     }
 
-        @AfterClass
-        public void quitDrivers() {
+    @AfterClass
+    public void quitDrivers() {
         driver.quit();
     }
-    }
+}
 
 
 
