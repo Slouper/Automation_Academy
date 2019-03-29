@@ -1,4 +1,4 @@
-package MBA.SedmaLekce;
+package MBA.SedmaLekceFluent.SedmaLekce;
 
 
 import org.openqa.selenium.WebDriver;
@@ -7,19 +7,21 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 
-public class RedmineTimeLogReportPage extends AbstractPage {
+public class RedmineHelpPageFluent extends AbstractPageFluent {
 
     @FindBy(how = How.XPATH, using = "//a[text()='Spent-time details']/parent::li/following::a[1]")
     private WebElement TimelogReport;
 
-    public RedmineTimeLogReportPage(WebDriver driver) {
+    WebDriver driver;
+
+    public RedmineHelpPageFluent(WebDriver driver) {
         super(driver);
+        this.driver = driver;
     }
 
-    public RedmineTimeLogReportPage clickOnTimelogReport() {
+    public void clickOnTimelogReport() {
+
         TimelogReport.click();
-        return this;
     }
-
 
 }

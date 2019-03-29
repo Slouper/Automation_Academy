@@ -12,10 +12,7 @@ public class RedmineHomePage extends AbstractPage {
 
     public RedmineHomePage(WebDriver driver) { super(driver); }
 
-    @Override
-    public void isOpen() {
 
-    }
     public void clickOnLoginAnchor () {
         loginAnchor.click();
     }

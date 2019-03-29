@@ -1,11 +1,11 @@
-package MBA.SedmaLekce;
+package MBA.SedmaLekceFluent.SedmaLekce;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class RedmineLoginPage extends AbstractPage {
+public class RedmineLoginPageFluent extends AbstractPageFluent {
 
     @FindBy(how = How.XPATH, using = "//input[@name='username']")
     private WebElement usernameInput;
@@ -16,20 +16,26 @@ public class RedmineLoginPage extends AbstractPage {
     @FindBy(how = How.XPATH, using = "//input[@name='login']")
     private WebElement loginButton;
 
-    public RedmineLoginPage(WebDriver driver) {
+    WebDriver driver;
+
+    public RedmineLoginPageFluent(WebDriver driver) {
         super(driver);
+        this.driver = driver;
 
     }
 
-    public void fillUsernameInput(String username) {
+    public RedmineLoginPageFluent fillUsernameInput(String username) {
         usernameInput.sendKeys(username);
+        return this;
     }
 
-    public void fillPasswordInput(String password) {
+    public RedmineLoginPageFluent fillPasswordInput(String password) {
         passwordInput.sendKeys(password);
+        return this;
     }
 
-    public void clickLoginButton() {
+    public RedmineMainPageFluent clickLoginButton() {
         loginButton.click();
+        return new RedmineMainPageFluent(driver);
     }
 }

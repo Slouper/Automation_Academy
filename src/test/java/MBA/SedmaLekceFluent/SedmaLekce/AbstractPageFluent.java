@@ -1,15 +1,15 @@
-package MBA.SedmaLekce;
+package MBA.SedmaLekceFluent.SedmaLekce;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public abstract class AbstractPage {
+public abstract class AbstractPageFluent {
 
-    protected WebDriver driver;
+    private WebDriver driver;
     private WebDriverWait wait;
 
-    public AbstractPage(WebDriver driver) {
+    public AbstractPageFluent(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
         wait = new WebDriverWait(driver, 20);

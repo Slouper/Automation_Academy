@@ -15,11 +15,11 @@ import java.time.Duration;
 
 public class RedmineHW5 {
 
-        WebDriver driver;
+    WebDriver driver;
 
-        @Test
-        public void Registration() {
-             final Logger log = LoggerFactory.getLogger(RedmineHW5.class);
+    @Test
+    public void Registration() {
+        final Logger log = LoggerFactory.getLogger(RedmineHW5.class);
 
         driver.findElement(By.xpath("//*[@id=\"account\"]/ul/li[2]/a")).click();
         driver.findElement(By.xpath("//*[@id=\"user_login\"]")).sendKeys("TvojeMama");
@@ -38,21 +38,21 @@ public class RedmineHW5 {
                 .sendKeys(Keys.RETURN)
                 .pause(Duration.ofSeconds(3))
                 .perform();
-            System.out.println(driver.findElement(By.xpath("//*[@id=\"flash_error\"]")).getText());
+        System.out.println(driver.findElement(By.xpath("//*[@id=\"flash_error\"]")).getText());
     }
 
-        @BeforeClass
-        public void startDriver() {
+    @BeforeClass
+    public void startDriver() {
         driver = new ChromeDriver();
         driver.get("http://www.redmine.org/");
         driver.manage().window().maximize();
     }
 
-        @AfterClass
-        public void quitDrivers() {
+    @AfterClass
+    public void quitDrivers() {
         driver.quit();
     }
-    }
+}
 
 
 
