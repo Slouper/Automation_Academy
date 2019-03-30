@@ -16,21 +16,24 @@ import java.time.Duration;
 public class RedmineHW5 {
 
     WebDriver driver;
+    public static final String user = "TvojeMama" + (int)(Math.random() * 100 + 1);
+    public static final String email = "" + (int)(Math.random() * 100 + 1);
+
 
     @Test
     public void Registration() {
         final Logger log = LoggerFactory.getLogger(RedmineHW5.class);
 
         driver.findElement(By.xpath("//*[@id=\"account\"]/ul/li[2]/a")).click();
-        driver.findElement(By.xpath("//*[@id=\"user_login\"]")).sendKeys("TvojeMama");
+        driver.findElement(By.xpath("//*[@id=\"user_login\"]")).sendKeys(user);
         driver.findElement(By.xpath("//*[@id=\"user_password\"]")).sendKeys("abcd1234");
         driver.findElement(By.xpath("//*[@id=\"user_password_confirmation\"]")).sendKeys("abcd1234");
         driver.findElement(By.xpath("//*[@id=\"user_firstname\"]")).sendKeys("Tvoje");
         driver.findElement(By.xpath("//*[@id=\"user_lastname\"]")).sendKeys("Mama");
-        driver.findElement(By.xpath("//*[@id=\"user_mail\"]")).sendKeys("tvojemama@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"user_mail\"]")).sendKeys("tvojemama@gmail" + email +".cz");
         driver.findElement(By.xpath("//*[@id=\"new_user\"]/input")).click();
         driver.findElement(By.xpath("//*[@id=\"account\"]/ul/li[1]/a")).click();
-        driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("TvojeMama");
+        driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys(user);
         driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("abcd1234");
         Actions actions = new Actions(driver);
         actions
@@ -43,6 +46,7 @@ public class RedmineHW5 {
 
     @BeforeClass
     public void startDriver() {
+        System.setProperty("webdriver.chrome.driver", "C:/chrome_driver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://www.redmine.org/");
         driver.manage().window().maximize();
