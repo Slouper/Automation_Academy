@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class RedMineLoginPageHw8 extends BasePageHw8 {
 
@@ -20,6 +21,7 @@ public class RedMineLoginPageHw8 extends BasePageHw8 {
     private WebElement flashError;
 
     public RedMineLoginPageHw8(WebDriver driver) {
+
         super(driver);
     }
 
@@ -35,9 +37,9 @@ public class RedMineLoginPageHw8 extends BasePageHw8 {
         return this;
     }
 
-    public RedMineMainPageHw8 clickLoginButtonXpath(WebDriver driver) {
+    public RedMineMainPageHw8 clickLoginButtonXpath() {
 
         loginButtonXpath.click();
-        return new RedMineMainPageHw8(driver);
+        return new RedMineMainPageHw8(getDriver());
     }
 }

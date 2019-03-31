@@ -8,12 +8,12 @@ public class RedMineFluentInterfaceTest extends AbstractTestFluentInterface {
     @Test
     public void redMineFluentInterfaceTest() {
         new RedMineHomePageHw8(getDriver())
-                .clickOnLoginAnchor(getDriver())
+                .clickOnLoginAnchor()
                 .fillUsernameInput(username)
                 .fillPasswordInput(password)
-                .clickLoginButtonXpath(getDriver())
-                .clickOnHelpAnchor(getDriver())
-                .clickSpentTimeDetails(getDriver())
+                .clickLoginButtonXpath()
+                .clickOnHelpAnchor()
+                .clickSpentTimeDetails()
                 .titleVerification();
     }
 

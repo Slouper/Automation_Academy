@@ -16,9 +16,9 @@ public class RedMineMainPageHw8 extends BasePageHw8 {
         super(driver);
     }
 
-    public RedMineHelpPageHw8 clickOnHelpAnchor (WebDriver driver) {
+    public RedMineHelpPageHw8 clickOnHelpAnchor () {
 
         helpAnchor.click();
-        return new RedMineHelpPageHw8(driver);
+        return new RedMineHelpPageHw8(getDriver());
     }
 }

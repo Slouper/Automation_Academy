@@ -28,9 +28,9 @@ public class RedMineHelpPageHw8 extends BasePageHw8 {
         return this;
     }
 
-    public RedMineSpentTimeDetailsPageHw8 clickSpentTimeDetails(WebDriver driver){
+    public RedMineSpentTimeDetailsPageHw8 clickSpentTimeDetails(){
 
         spentTimeDetails.click();
-        return new RedMineSpentTimeDetailsPageHw8(driver);
+        return new RedMineSpentTimeDetailsPageHw8(getDriver());
     }
 }

@@ -17,8 +17,8 @@ public class RedMineHomePageHw8 extends BasePageHw8 {
         driver.get("http://www.redmine.org/");
     }
 
-    public RedMineLoginPageHw8 clickOnLoginAnchor(WebDriver driver){
+    public RedMineLoginPageHw8 clickOnLoginAnchor(){
         loginAnch.click();
-        return new RedMineLoginPageHw8(driver);
+        return new RedMineLoginPageHw8(getDriver());
     }
 }
