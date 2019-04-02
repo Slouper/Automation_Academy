@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class FluentReportPage extends FluentAbstract{
 
@@ -12,6 +13,7 @@ public class FluentReportPage extends FluentAbstract{
 
     public FluentReportPage(WebDriver driver) {
         super(driver);
+        getWait().until(ExpectedConditions.visibilityOf(fluentTimeReportCheck));
     }
 
     public FluentReportPage fluentTimeReportCheck() {

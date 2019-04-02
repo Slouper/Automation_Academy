@@ -16,7 +16,7 @@ public class FluentTest extends FluentTestAbstract {
                 .fluentUsernamePassword("PXPkehadBWX97Y9")
                 .fluentClickLoginButton()
                 .fluentHelpButton()
-                .fluentTimeReport()
-                .fluentTimeReportCheck();
+                .fluentTimeReport();
+//                .fluentTimeReportCheck();
     }
 }

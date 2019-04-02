@@ -21,4 +21,8 @@ public class XpathMainPage extends XpathAbstract {
     protected void isOpen() {
         getWait().until(ExpectedConditions -> xPathHelpButton.isDisplayed());
     }
+
+
+
+
 }
