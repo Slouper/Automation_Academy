@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 @Test
-public class Mirek {
+public class NewToursDemoHW4 {
     WebDriver driver;
 
     @Test
@@ -31,6 +31,7 @@ public class Mirek {
 
     @BeforeClass
     public void startDriver() {
+        System.setProperty("webdriver.chrome.driver", "C:/chrome_driver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://newtours.demoaut.com/mercurywelcome.php");
         driver.manage().window().maximize();

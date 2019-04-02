@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 @Test
-public class firstMozillaTest {
-    private static final Logger log = LoggerFactory.getLogger(firstMozillaTest.class);
+public class firstMozillaTestHW1 {
+    private static final Logger log = LoggerFactory.getLogger(firstMozillaTestHW1.class);
 
 
     @Test
