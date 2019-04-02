@@ -19,7 +19,7 @@ public class W3SchoolsHomePage extends AbstractPage {
         this.driver = driver;
     }
 
-    public static W3SchoolsHomePage clickOnreferenceAnchor() {
+    public W3SchoolsHomePage clickOnreferenceAnchor() {
         referenceAnchor.click();
         return null;
     }

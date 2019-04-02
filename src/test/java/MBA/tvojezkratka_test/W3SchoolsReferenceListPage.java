@@ -28,5 +28,5 @@ public class W3SchoolsReferenceListPage extends AbstractPage {
             TagAnchor.click();
             return null;
         }
-    }}
-
+    }
+}
