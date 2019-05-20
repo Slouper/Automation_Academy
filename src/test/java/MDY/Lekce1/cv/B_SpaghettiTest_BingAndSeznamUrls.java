@@ -1,4 +1,4 @@
-package PSL.Lekce1.cv;
+package MDY.Lekce1.cv;
 
 import java.util.concurrent.TimeUnit;
 
