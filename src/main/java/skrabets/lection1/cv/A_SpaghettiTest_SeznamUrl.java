@@ -1,7 +1,9 @@
 package skrabets.lection1.cv;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -18,9 +20,11 @@ public class A_SpaghettiTest_SeznamUrl {
     public void searchTermOnSeznamPage_WhenSeznamHomePageIsOpen() {
         log.debug("Test 'searchTermOnSeznamPage_WhenSeznamHomePageIsOpen' started");
 
-       // System.setProperty("webdriver.chrome.driver", "C:/Windows/System32/chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:/Windows/System32/chromedriver.exe");
+        System.setProperty("webdriver.gecko.driver", "C:/Windows/System32/geckodriver.exe");
 
-        ChromeDriver driver = new ChromeDriver();
+
+        WebDriver driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
         log.debug("WebDriver started ....");
