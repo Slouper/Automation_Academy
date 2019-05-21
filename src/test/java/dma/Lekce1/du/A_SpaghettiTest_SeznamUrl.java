@@ -18,6 +18,7 @@ public class A_SpaghettiTest_SeznamUrl {
     public void searchTermOnSeznamPage_WhenSeznamHomePageIsOpen() {
         log.debug("Test 'searchTermOnSeznamPage_WhenSeznamHomePageIsOpen' started");
 
+
         System.setProperty("webdriver.geckodriver.driver", "C:/firefox_driver/geckodriver.exe");
 
         FirefoxDriver driver = new FirefoxDriver();
