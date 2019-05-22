@@ -19,10 +19,10 @@ public class A_SpaghettiTest_SeznamUrl {
     public void searchTermOnSeznamPage_WhenSeznamHomePageIsOpen() {
         log.debug("Test 'searchTermOnSeznamPage_WhenSeznamHomePageIsOpen' started");
 
-        System.setProperty("webdriver.gecko.driver", "C:/gecko_driver/geckodriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:/chrome_driver/chromedriver.exe");
 
-        //ChromeDriver driver = new ChromeDriver();
-        FirefoxDriver driver = new FirefoxDriver();
+        ChromeDriver driver = new ChromeDriver();
+
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
         log.debug("WebDriver started ....");
