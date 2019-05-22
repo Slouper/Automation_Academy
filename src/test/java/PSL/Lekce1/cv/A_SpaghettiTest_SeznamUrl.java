@@ -4,6 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -19,8 +21,10 @@ public class A_SpaghettiTest_SeznamUrl {
         log.debug("Test 'searchTermOnSeznamPage_WhenSeznamHomePageIsOpen' started");
 
         System.setProperty("webdriver.chrome.driver", "C:/chrome_driver/chromedriver.exe");
-
         ChromeDriver driver = new ChromeDriver();
+        FirefoxDriver driver1 = new FirefoxDriver();
+        InternetExplorerDriver driver2 = new InternetExplorerDriver();
+
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
         log.debug("WebDriver started ....");
