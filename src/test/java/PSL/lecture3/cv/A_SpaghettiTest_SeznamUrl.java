@@ -1,4 +1,4 @@
-package PSL.Lekce1.cv;
+package PSL.lecture3.cv;
 
 import java.util.concurrent.TimeUnit;
 

@@ -1,4 +1,4 @@
-package PSL.Lekce2.cv;
+package PSL.lecture4.cv;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
