@@ -29,15 +29,13 @@ public class AseTestLecture4_SeleniumLibraries {
 
     @AfterTest
     public void afterTest() {
-        driver.quit();
-
 //        exception handling (bad practise)
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
+        driver.quit();
     }
 
     @Test
