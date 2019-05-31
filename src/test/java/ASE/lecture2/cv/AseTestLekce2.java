@@ -1,8 +1,8 @@
-package ASE.lekce2.du;
+package ASE.lecture2.cv;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
@@ -10,18 +10,13 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 @Test
-public class AseTestLekce2_DU {
-//    private ChromeDriver driver;
-    private FirefoxDriver driver;
-    private WebDriverWait wait;
+public class AseTestLekce2 {
+    private ChromeDriver driver;
 
     @BeforeTest
     public void beforeTest() {
-//        driver = new ChromeDriver();
-        System.setProperty("webdriver.gecko.driver", "c:\\Users\\alina.sedymova\\IdeaProjects\\Drivers\\geckodriver.exe");
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.get("https://www.seznam.cz");
-        wait = new WebDriverWait(driver, 15);
     }
 
     @AfterTest
@@ -29,11 +24,11 @@ public class AseTestLekce2_DU {
         driver.quit();
 
 //        exception handling (bad practise)
-//        try {
-//            Thread.sleep(3000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -50,6 +45,7 @@ public class AseTestLekce2_DU {
         searchInput.submit();
 
 //        3) wait for element
+        WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@title='Vyhledat']")));
 
 //        4) variable searchButtonMagnifier
