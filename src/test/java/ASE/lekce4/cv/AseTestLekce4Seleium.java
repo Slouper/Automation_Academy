@@ -1,4 +1,4 @@
-package ASE.lekce6.cv;
+package ASE.lekce4.cv;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class AseTestLekce6Seleium {
+public class AseTestLekce4Seleium {
 
     private ChromeDriver driver;
     //    private FirefoxDriver driver;
