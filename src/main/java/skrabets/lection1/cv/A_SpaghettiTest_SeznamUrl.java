@@ -2,7 +2,7 @@ package skrabets.lection1.cv;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-@Test
 public class A_SpaghettiTest_SeznamUrl {
     private static final Logger log = LoggerFactory.getLogger(A_SpaghettiTest_SeznamUrl.class);
 

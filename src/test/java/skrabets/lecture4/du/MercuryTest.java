@@ -1,4 +1,4 @@
-package skrabets.Lection3.du;
+package skrabets.lecture4.du;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
