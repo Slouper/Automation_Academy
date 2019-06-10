@@ -1,5 +1,8 @@
 package PSL.lecture6.pc;
 
+import java.awt.*;
+
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,11 +25,7 @@ public class TestSeleniumLibraries {
 
     @AfterTest
     public void afterTest() {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep();
         driver.quit();
     }
 
@@ -119,5 +118,36 @@ public class TestSeleniumLibraries {
         actions.pause(2000).perform();
 
         select.selectByVisibleText("Option 2");
+    }
+
+    @Test
+    public void testRobotLibrary() {
+        Dimension windowSize = driver.manage().window().getSize();
+
+        Robot robot = getRobot();
+
+        robot.mouseMove(windowSize.height / 2, windowSize.width / 2);
+
+        sleep();
+
+        robot.mouseMove(50, 50);
+    }
+
+    private void sleep() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private Robot getRobot() {
+        Robot robot = null;
+        try {
+            robot = new Robot();
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+        return robot;
     }
 }
