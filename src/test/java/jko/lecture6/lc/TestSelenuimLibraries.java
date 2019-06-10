@@ -1,5 +1,6 @@
 package jko.lecture6.lc;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,6 +9,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import java.awt.*;
 
 public class TestSelenuimLibraries {
 
@@ -24,11 +27,7 @@ public class TestSelenuimLibraries {
     @AfterTest
     public void AfterTest() {
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        sleep();
 
         driver.quit();
 
@@ -108,5 +107,41 @@ public class TestSelenuimLibraries {
         selectedDropdown.selectByValue("2");
         actions.pause(2000);
 
+    }
+
+    @Test
+    public void testRobotLibrary() {
+
+        Robot robot = null;
+
+        Dimension windowSize = driver.manage().window().getSize();
+
+        robot = getRobot(robot);
+
+        robot.mouseMove(windowSize.height /2, windowSize.width / 2);
+
+        sleep();
+
+        robot.mouseMove(50, 50);
+
+        sleep();
+
+    }
+
+    private void sleep() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private Robot getRobot(Robot robot) {
+        try {
+            robot = new Robot();
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+        return robot;
     }
 }

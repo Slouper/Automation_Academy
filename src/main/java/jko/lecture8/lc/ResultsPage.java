@@ -1,24 +1,29 @@
-package PSL.lecture7.pc;
+package jko.lecture8.lc;
 
+import jko.lecture8.lc.base.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 
-public class ResultsPage {
-    private WebDriver driver;
+public class ResultsPage extends AbstractPage {
+
 
     @FindBy(how = How.XPATH, using = "//a[@class='Result-title-link'][1]")
     private WebElement firstResultLink;
 
-    public ResultsPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+    @Override
+    protected boolean isOpen() {
+        return firstResultLink.isDisplayed();
     }
+
+    public ResultsPage(WebDriver driver) {
+        super(driver);
+    }
+
 
     public WebBrowserAutomationPage clickOnFirstResultLink() {
         firstResultLink.click();
-        return new WebBrowserAutomationPage(driver);
+        return new WebBrowserAutomationPage(getDriver());
     }
 }

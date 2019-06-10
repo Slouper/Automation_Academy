@@ -1,13 +1,13 @@
-package PSL.lecture7.pc;
+package jko.lecture8.lc;
 
+import jko.lecture8.lc.base.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 
-public class SeznamHomePage {
-    private WebDriver driver;
+public class SeznamHomePage extends AbstractPage {
+
 
     @FindBy(how = How.XPATH, using = "//*[@name='q']")
     private WebElement searchInputField;
@@ -15,14 +15,18 @@ public class SeznamHomePage {
     @FindBy(how = How.XPATH, using = "//button[@type='submit']")
     private WebElement searchButton;
 
+    @Override
+    protected boolean isOpen() {
+        return searchInputField.isDisplayed();
+    }
+
     public SeznamHomePage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+        super(driver);
     }
 
     public ResultsPage clickOnSearchButton() {
         searchButton.click();
-        return new ResultsPage(driver);
+        return new ResultsPage(getDriver());
     }
 
     public SeznamHomePage enterSearchedExpression(String searchedExpression) {
