@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 
 @Test
-public class AseTestLecture8_SeznamHomePage extends AseAbstractTest {
+public class SeznamHomePageTest extends AseAbstractTest {
 
     @Test(description = "Co dela tento test")
     public void shouldBeExpressionFound() {

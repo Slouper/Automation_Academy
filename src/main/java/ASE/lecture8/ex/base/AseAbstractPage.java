@@ -3,7 +3,7 @@ package ASE.lecture8.ex.base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-//abstraktni trida se vytvari pomoci konstruktoru pres alt+insert
+//alt+insert vyvola konstruktor
 
 public abstract class AseAbstractPage {
     private WebDriver driver;

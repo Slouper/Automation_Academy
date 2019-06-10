@@ -7,11 +7,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class Ase_WebBrowserAutomationPage extends AseAbstractPage {
+public class WebBrowserAutomationPage extends AseAbstractPage {
     @FindBy(how = How.XPATH, using = "//*[@id='mainContent']/h2[1]")
     private WebElement articleTitle;
 
-    public Ase_WebBrowserAutomationPage(WebDriver driver) {
+    public WebBrowserAutomationPage(WebDriver driver) {
         super(driver);
     }
 

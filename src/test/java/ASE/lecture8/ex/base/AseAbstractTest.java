@@ -16,18 +16,18 @@ public abstract class AseAbstractTest {
     @BeforeTest
     public void beforeTest() {
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         driver.get("https://www.seznam.cz");
     }
 
     @AfterTest
     public void afterTest() {
-//        exception handling (bad practise)
-//        try {
-//            Thread.sleep(3000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        //exception handling (bad practise)
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         driver.quit();
     }
 

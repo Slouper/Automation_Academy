@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 
 public class NewResultPage extends AseAbstractPage {
 
@@ -27,9 +26,9 @@ public class NewResultPage extends AseAbstractPage {
 //        firstResultLink.click();
 //    }
 
-    public Ase_WebBrowserAutomationPage clickOnFirstResultLink(){
+    public WebBrowserAutomationPage clickOnFirstResultLink(){
         firstResultLink.click();
-        return new Ase_WebBrowserAutomationPage(getDriver());
+        return new WebBrowserAutomationPage(getDriver());
 
     }
 
