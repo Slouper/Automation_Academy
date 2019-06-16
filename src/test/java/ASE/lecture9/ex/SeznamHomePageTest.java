@@ -1,6 +1,7 @@
-package ASE.lecture8.ex;
+package ASE.lecture9.ex;
 
-import ASE.lecture8.ex.base.AseAbstractTest;
+import ASE.lecture8.ex.SeznamHomePage;
+import ASE.lecture9.ex.base.AseAbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,7 +9,7 @@ import org.testng.annotations.Test;
 @Test
 public class SeznamHomePageTest extends AseAbstractTest {
 
-    @Test(description = "Popis co dela tento test")
+    @Test(description = "Co dela tento test")
     public void shouldBeExpressionFound() {
         String articleTitle = new SeznamHomePage(getDriver())
                 .enterSearchExpression("Selenium webdriver")
