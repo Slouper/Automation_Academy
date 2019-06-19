@@ -2,6 +2,8 @@ package ASE.lecture7.hw;
 
 import ASE.lecture7.hw.base.AbstractTest;
 import ASE.lecture7.hw.pageObjects.NewtoursHomePage;
+import ASE.lecture7.hw.pageObjects.NewtoursRegisterPage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
@@ -10,12 +12,13 @@ public class RegisterToNewtoursTest extends AbstractTest {
 
     @Test(description = "Vyplnit všechny inputy pro registraci")
     public void registrationTest() {
-        new NewtoursHomePage(getDriver())
+        String userNameExpression = "EvženOněgin";
+        NewtoursRegisterPage newtoursRegisterPage = new NewtoursHomePage(getDriver())
                 .clickOnRegisterLink()
                 .enterFirstName("Sasha")
                 .enterLastName("Pushkin")
                 .enterPhone("777888999")
-                .enterUserName("chuva@sro.ru")
+                .enterUserName(userNameExpression)
                 .enterAddress("Pushkinskaya str. 1")
                 .enterCity("Pushkinskiye Gory")
                 .enterState("Pskov region, Russia")
@@ -24,6 +27,8 @@ public class RegisterToNewtoursTest extends AbstractTest {
                 .enterEmail("EvženOněgin")
                 .enterPassword("Evžen*Onegin")
                 .confirmPassword("Evžen*Onegin");
+
+        Assert.assertEquals(newtoursRegisterPage.getEmailValue(), userNameExpression);
     }
 
 }

@@ -49,9 +49,19 @@ public class NewtoursRegisterPage extends AbstractPage {
         super(driver);
     }
 
+    public String getEmailValue(){
+        return email.getAttribute("value");
+    }
+
+
+    @Override
+    protected boolean isOpen(WebElement element){
+        return element.isDisplayed();
+    }
+
     @Override
     protected boolean isOpen() {
-        return confirmPassword.isDisplayed();
+        return confirmPassword.isDisplayed() && country.isDisplayed();
     }
 
     public NewtoursRegisterPage enterFirstName(String firstNameExpression){

@@ -1,8 +1,6 @@
 package ASE.lecture7.hw.base;
 
-import ASE.lecture7.hw.pageObjects.NewtoursHomePage;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -24,7 +22,16 @@ public abstract class AbstractTest {
 
     @AfterTest
     public void afterTest() {
+        mySleep(3);
         driver.quit();
+    }
+
+    private void mySleep(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }
