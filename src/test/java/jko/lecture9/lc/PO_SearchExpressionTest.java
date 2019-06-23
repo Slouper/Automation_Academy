@@ -1,5 +1,6 @@
-package PSL.lecture8.lc;
+package jko.lecture9.lc;
 
+import PSL.lecture8.lc.SeznamHomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
