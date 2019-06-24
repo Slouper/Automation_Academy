@@ -1,5 +1,6 @@
 package sloup.Z_spaghetti_page_objects;
 
+import dma.Lekce7.cv.SeznamHomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
@@ -8,7 +9,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import sloup.A_B_pageobject.SeznamHomePage;
 import sloup.A_B_pageobject.SeznamSearchResultsPage;
 
 @Test
