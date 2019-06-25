@@ -12,7 +12,7 @@ public class SeznamHomePage {
     @FindBy(how = How.XPATH, using = "//*[@name='q']")
     private WebElement searchInputField;
 
-    @FindBy(how = How.XPATH, using = "//button[@type='submit']")
+    @FindBy(how = How.XPATH, using = "//input[@id='username']")
     private WebElement searchButton;
 
     public SeznamHomePage(WebDriver driver) {
@@ -28,5 +28,9 @@ public class SeznamHomePage {
     public SeznamHomePage enterSearchedExpression(String searchedExpression) {
         searchInputField.sendKeys(searchedExpression);
         return this;
+    }
+
+    public void searchExpressionOnSeznamHomePage(String selenium_driver) {
+
     }
 }
