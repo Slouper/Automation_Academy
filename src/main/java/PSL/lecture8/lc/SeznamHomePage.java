@@ -1,6 +1,5 @@
 package PSL.lecture8.lc;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -20,13 +19,9 @@ public class SeznamHomePage extends AbstractPage {
         return searchInputField.isDisplayed();
     }
 
-    public SeznamHomePage(WebDriver driver) {
-        super(driver);
-    }
-
     public ResultsPage clickOnSearchButton() {
         searchButton.click();
-        return new ResultsPage(getDriver());
+        return new ResultsPage();
     }
 
     public SeznamHomePage enterSearchedExpression(String searchedExpression) {

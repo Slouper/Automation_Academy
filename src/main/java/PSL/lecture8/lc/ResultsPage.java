@@ -1,6 +1,5 @@
 package PSL.lecture8.lc;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -17,12 +16,8 @@ public class ResultsPage extends AbstractPage {
         return firstResultLink.isDisplayed();
     }
 
-    public ResultsPage(WebDriver driver) {
-        super(driver);
-    }
-
     public WebBrowserAutomationPage clickOnFirstResultLink() {
         firstResultLink.click();
-        return new WebBrowserAutomationPage(getDriver());
+        return new WebBrowserAutomationPage();
     }
 }
