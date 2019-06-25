@@ -17,7 +17,7 @@ public abstract class AbstractTest {
         driver = new DriverFactory().initDriver(BrowserType.CHROME);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("https://www.hbo.cz/");
+        driver.get("https://tm.inventi.cz");
     }
 
     @AfterTest

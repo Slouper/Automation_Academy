@@ -1,6 +1,5 @@
 package PSL.lecture8.lc;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -15,10 +14,6 @@ public class WebBrowserAutomationPage extends AbstractPage {
     @Override
     protected boolean isOpen() {
         return articleTitle.isDisplayed();
-    }
-
-    public WebBrowserAutomationPage(WebDriver driver) {
-        super(driver);
     }
 
     public String getArticleTitleValue() {

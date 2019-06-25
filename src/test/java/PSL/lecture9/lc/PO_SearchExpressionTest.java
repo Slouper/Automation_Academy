@@ -12,7 +12,7 @@ public class PO_SearchExpressionTest extends AbstractTest {
     @Test(description = "Tenhle test dela toto")
     public void shouldBeExpressionFound() {
         String articleTitle = null;
-        articleTitle = new SeznamHomePage(getDriver())
+        articleTitle = new SeznamHomePage()
                 .enterSearchedExpression("Selenium webdriver")
                 .clickOnSearchButton()
                 .clickOnFirstResultLink()

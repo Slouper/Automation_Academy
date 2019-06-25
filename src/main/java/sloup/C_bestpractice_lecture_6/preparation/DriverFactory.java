@@ -27,10 +27,8 @@ public class DriverFactory {
     public static WebDriver getDriver() {
         if (driver == null) {
             driver = new ChromeDriver();
-            return driver;
-        } else {
-            return driver;
         }
+        return driver;
     }
 
     public static WebDriverWait getWait() {
